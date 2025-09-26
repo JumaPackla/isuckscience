@@ -8,11 +8,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
                 const context = contents[i].textContent
                 contexts.push(context)
             }
-            const answer_container = question_container[0].getElementsByClassName("no-print-row");
-            for (let i = 0; i < answer_container.length; i++) {
-                const answer = answer_container[i].textContent
-                contexts.push(answer)
-            }
+            // const answer_container = question_container[0].getElementsByClassName("no-print-row");
+            // print("hello", answer_container)
+            // for (let i = 0; i < answer_container.length; i++) {
+            //     const answer = answer_container[i].textContent
+            //     print(answer)
+            //     contexts.push(answer)
+            // }
             sendResponse({ contexts });
         } else {
             sendResponse({ contexts: ["Question container not found"]});
