@@ -3,6 +3,10 @@
   "name": "isuckscience",
   "version": "1.0.0",
   "action": {
+      "default_icon": {
+        "16": "images/main_img.png",
+        "32": "images/main_img.png"
+      },
     "default_popup": "popup/popup.html",
     "default_title": "isuckscience"
   },
@@ -11,10 +15,15 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://isaacscience.org/"],
       "js": ["content_scripts/content.js"]
     }
   ],
+  "icons": {
+    "16": "images/main_img.png",
+    "48": "images/main_img.png",
+    "128": "images/main_img.png"
+  },
   "permissions": [
     "storage",
     "scripting",
