@@ -8,7 +8,6 @@ document.getElementById("gethtml").addEventListener("click", async () => {
     });
 
     chrome.tabs.sendMessage(tab.id, { type: "getQuestion" }, (response) => {
-        console.log(response.contexts)
         if (chrome.runtime.lastError) {
             document.getElementById("result").textContent = "Error: " + chrome.runtime.lastError.message;
         } else {

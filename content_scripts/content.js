@@ -5,8 +5,9 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             const contents = question_container[0].getElementsByClassName("content-value");
             const contexts = []
             for (let i = 0; i < contents.length; i++) {
-                const context = contents[i].length > 0 ? contents[i].innerHTML : "No content found";
+                const context = contents[i].innerHTML
                 contexts.push(context)
+                
             }
             sendResponse({ contexts });
         } else {
