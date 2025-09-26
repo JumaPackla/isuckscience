@@ -5,9 +5,13 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
             const contents = question_container[0].getElementsByClassName("content-value");
             const contexts = []
             for (let i = 0; i < contents.length; i++) {
-                const context = contents[i].innerHTML
+                const context = contents[i].textContent
                 contexts.push(context)
-                
+            }
+            const answer_container = question_container[0].getElementsByClassName("no-print-row");
+            for (let i = 0; i < answer_container.length; i++) {
+                const answer = answer_container[i].textContent
+                contexts.push(answer)
             }
             sendResponse({ contexts });
         } else {
