@@ -12,7 +12,7 @@ document.getElementById("gethtml").addEventListener("click", async () => {
             document.getElementById("result").textContent = "Error: " + chrome.runtime.lastError.message;
         } else {
             for (const html_response of response.contexts) {
-                document.getElementById("result").innerHTML += html_response;
+                document.getElementById("result").textContent += html_response;
             }
         }
     });
