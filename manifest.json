@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
-  "name": "stuff",
+  "name": "isuckscience",
   "version": "1.0.0",
   "action": {
     "default_popup": "popup/popup.html",
-    "default_title": "stufff"
+    "default_title": "isuckscience"
   },
   "background": {
     "service_worker": "background/background.js"
